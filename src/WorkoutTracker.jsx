@@ -17,6 +17,17 @@ export default function WorkoutTracker() {
         }));
     }, [stats.steps]);
 
+    // Load saved workouts on initial load
+    useEffect(() => {
+        const savedWorkouts = localStorage.getItem('workouts');
+        if (savedWorkouts) {
+            setWorkouts(JSON.parse(savedWorkouts));
+        }
+    }, []);
+    // Save workouts to localStorage whenever they change
+    useEffect(() => {
+        localStorage.setItem('workouts', JSON.stringify(workouts));
+    }, [workouts]);
     const handleAddWorkout = () => {
         if (newWorkout.name && newWorkout.sets && newWorkout.reps) {
             setWorkouts([
