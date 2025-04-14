@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.workout-timestamps {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-top: 0.5rem;
+}
+
