@@ -98,9 +98,9 @@ export default function WorkoutTracker() {
                                         <label className="form-label">Type</label>
                                         <select className="form-select" value={newWorkout.type} onChange={(e) => setNewWorkout({...newWorkout, type: e.target.value})}>
                                             <option value="strength">Strength</option>
-                                            <option value="cardio">Cardio</option>
-                                            <option value="flexibility">Flexibility</option>
-                                            <option value="balance">Balance</option>
+                                            <option value="Push">Push</option>
+                                            <option value="Pull">Pull</option>
+                                            <option value="Legs">Legs</option>
                                         </select>
                                     </div>
                                 </div>
